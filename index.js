@@ -1,6 +1,6 @@
 /* 
 - Code for rock paper scissors game
-- Player will play aganist a random selection of the computer 
+- Player will play against a random selection of the computer 
 
 Rules: 
 - Rock Crushes scissors and is covered by paper 
@@ -16,19 +16,19 @@ const computerPlay = () => {
   const randInt = Math.floor(Math.random() * 3);
 
   if (randInt === 0) {
-    return "rock";
+    return 'rock';
   } else if (randInt === 1) {
-    return "scissors";
+    return 'scissors';
   } else {
-    return "paper";
+    return 'paper';
   }
-  //   console.log(randInt);
+  //   console.log(randInt); 1-rock 2-scissors 3 -paper
 };
 
 // user selection
 const userPlay = () => {
   const userSelection = prompt(
-    "Please enter Your Selelectin - Rock, Paper, or Scissors"
+    'Please enter Your Selection - Rock, Paper, or Scissors'
   );
 
   return userSelection.toLowerCase().trim();
@@ -42,33 +42,33 @@ const playRound = (computerSelection, playerSelection) => {
   let playerScore = 0;
 
   // 1st Scenario
-  if (computerSelection === "rock") {
+  if (computerSelection === 'rock') {
     // console.log("Computer on rock");
 
-    if (playerSelection === "paper") {
+    if (playerSelection === 'paper') {
       playerScore = 1;
-    } else if (playerSelection === "scissors") {
+    } else if (playerSelection === 'scissors') {
       computerScore = 1;
     } else {
       computerScore = 0;
       playerScore = 0;
     }
-  } else if (computerSelection === "scissors") {
+  } else if (computerSelection === 'scissors') {
     // console.log("Computer on Scissors");
-    if (playerSelection === "rock") {
+    if (playerSelection === 'rock') {
       playerScore = 1;
-    } else if (playerSelection === "paper") {
+    } else if (playerSelection === 'paper') {
       computerScore = 1;
     } else {
       computerScore = 0;
       playerScore = 0;
     }
-  } else if (computerSelection === "paper") {
+  } else if (computerSelection === 'paper') {
     // console.log("Computer on paper");
 
-    if (playerSelection === "scissors") {
+    if (playerSelection === 'scissors') {
       playerScore = 1;
-    } else if (playerSelection === "rock") {
+    } else if (playerSelection === 'rock') {
       computerScore = 1;
     } else {
       computerScore = 0;
@@ -84,11 +84,11 @@ const playRound = (computerSelection, playerSelection) => {
 };
 
 const playGame = () => {
-  document.getElementById("results").innerHTML = "";
-  const playerName = prompt("Please Enter Your Name");
+  document.getElementById('results').innerHTML = '';
+  const playerName = prompt('Please Enter Your Name');
   console.log(`${playerName}: Welcome to the Rock, Paper and Scissors Game`);
   const round = parseInt(
-    prompt(" Please Enter the number of rounds for the game")
+    prompt(' Please Enter the number of rounds for the game')
   );
   let compScore = 0;
   let playeScore = 0;
@@ -121,23 +121,23 @@ const playGame = () => {
   if (compScore > playeScore) {
     const str = `The computer wins the ${round} rounds with ${compScore} points aganist ${playerName} with ${playeScore} points`;
     console.log(str);
-    document.getElementById("results").innerHTML = str;
+    document.getElementById('results').innerHTML = str;
   } else if (compScore < playeScore) {
     const str = ` ${playerName} wins the ${round} rounds with ${playeScore} points aganist computer with ${compScore} points aganist `;
     console.log(str);
-    document.getElementById("results").innerHTML = str;
+    document.getElementById('results').innerHTML = str;
 
     // alert(str);
   } else {
     const str = ` This is a draw of  ${playeScore} points for the ${round} rounds`;
     console.log(str);
     alert(str);
-    document.getElementById("results").innerHTML = str;
+    document.getElementById('results').innerHTML = str;
   }
   console.log(`THE END`);
 };
 
 // playGame();
-document.getElementById("start-game").addEventListener("click", () => {
+document.getElementById('start-game').addEventListener('click', () => {
   console.clear(), playGame();
 });

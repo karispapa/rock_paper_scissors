@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #bfbac0 0%, #a77e80 100%);
+  /* background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
+
+.title {
+  font-size: 5rem;
+  color: rgb(225, 220, 220);
+}
+
+.start-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.start-page button,
+.next,
+.restart {
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  color: rgb(225, 220, 220);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+form p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+form input {
+  padding: 0.7rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.user-details {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.8rem;
+  color: rgb(225, 220, 220);
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+}
+
+.user-play img {
+  height: 10rem;
+  width: auto;
+  border-radius: 50%;
+}
+
+/* .user-play span {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+} */
+
+.results {
+  display: flex;
+  font-size: 1.8rem;
+  color: rgb(225, 220, 220);
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+}
+
+.player,
+.computer {
+  display: flex;
+}
+
+.player :first-child,
+.computer :first-child {
+  margin-right: 0.5rem;
+}
+
+.restart {
+  align-self: center;
+  text-align: center;
+  margin-left: 6rem;
+}
